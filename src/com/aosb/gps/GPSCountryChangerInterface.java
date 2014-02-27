@@ -1,4 +1,4 @@
-package de.djnilse.gps_countryoptimizer;
+package com.aosb.gps;
 
 import java.io.BufferedReader;
 import java.io.File;

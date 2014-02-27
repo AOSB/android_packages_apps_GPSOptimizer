@@ -1,4 +1,4 @@
-package de.djnilse.gps_countryoptimizer;
+package com.aosb.gps;
 
 import android.preference.PreferenceActivity;
 import android.os.Bundle;
