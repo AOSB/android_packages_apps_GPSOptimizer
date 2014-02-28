@@ -133,8 +133,6 @@ public class GPSCountryChangerInterface extends Activity {
 	/** Called when the activity is destroyed. */
 	@Override
 	public void onDestroy() {
-		addLog("Resetting filesystem mounts...\n");
-
 		// clean up system mount
 		try {
 			remountSystem(false);
@@ -159,18 +157,13 @@ public class GPSCountryChangerInterface extends Activity {
 		configureGPS(countrycodes[selectedId]);
 
 		try {
-			addLog("Saving countrycode for next time...\n");
-
 			directory = getDir("code", MODE_PRIVATE);
 			file = new File(directory, "countrycode");
 
 			FileOutputStream fileOut = new FileOutputStream(file);
 			saveFile(fileOut, countrycodes[selectedId]);
 
-			addLog("Success! C ya next time :D\n");
-			// addLog("");
-			addLog("This application was brought to you by djnilse@xda\n");
-			addLog("Thanks go to all of THE #GingerDX IRC channel :D");
+			addLog("Success! \n");
 			clearLog = true;
 
 		} catch (FileNotFoundException e) {
